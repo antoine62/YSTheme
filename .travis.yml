@@ -46,7 +46,7 @@ after_success:
   - git config --local user.name "antoine62"
  - git clone --depth 1 https://$GITHUB_TOKEN@github.com/antoine62/builds.git
   - cd Builds/YSTheme
-  - cp ../../ButtonBoot.7z ButtonBoot.7z
+  - cp ../../YSTheme.nds YSTheme.nds
   - git stage .
   - git commit -m "YSTheme | $COMMIT_TAG"
   - git push origin master
