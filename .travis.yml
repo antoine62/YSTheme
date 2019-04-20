@@ -1,5 +1,6 @@
 language: cpp
 
+
 os: linux
 sudo: false
 dist: trusty
@@ -42,6 +43,16 @@ addons:
 
 after_success:
   - echo 'yummy breakfast :3 (Build Successful)'
+  - git config --local user.name "antoine62"
+ - git clone --depth 1 https://$GITHUB_TOKEN@github.com/antoine62/builds.git
+  - cd Builds/YSTheme
+  - cp ../../ButtonBoot.7z ButtonBoot.7z
+  - git stage .
+  - git commit -m "YSTheme | $COMMIT_TAG"
+  - git push origin master
+  - export CURRENT_DATE=$(date +'%Y%m%d-%H%M%S')
+  - git tag v$CURRENT_DATE
+
 
 after_failure:
   - echo 'gross breakfast (Build Failed)'
