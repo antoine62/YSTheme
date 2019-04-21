@@ -35,9 +35,9 @@
 	std::string themepath = "/theme/" + std::to_string(themenum);
 	printf("\x1b[7;1H%s", themepath.c_str());
 	printf("\x1b[6;1H/theme/%i",themenum);
+	printf("\x1b[0;1H"+ (access((themepath + "/YSMenu.ini").c_str(), F_OK) == 0));
 	
 	if ((access((themepath + "/YSMenu.ini").c_str(), F_OK) == 0)) {
-		printf("\x1b[0;1H"+ (access((themepath + "/YSMenu.ini").c_str(), F_OK) == 0));
 		
 		
 		
