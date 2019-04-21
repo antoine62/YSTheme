@@ -78,7 +78,7 @@ int main(int argc, char **argv) {
 	while (true){
 		//Scan nds KEY
 		scanKeys();
-		int pressed = keysDownRepeat();
+		int pressed = keysDown();
 		if (pressed & KEY_RIGHT){
 			selected+=1;
 				iprintf("theme %i - %s\n", selected, themesname.c_str());
