@@ -30,7 +30,7 @@ std::string path = "/";
 inline bool fexist(const char* name) {
     std::ifstream f(name);
     return f.good();
-   
+}
     
      
       /*_-_-_-_-_-_-_-_-_-_-_-_-*/
