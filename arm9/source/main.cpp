@@ -75,7 +75,7 @@ int main(int argc, char **argv) {
 	while (true){
 		std::string path = "./";
 		std::string themesname = themename(selected);
-		printf("theme %i - %s\n", selected, themesname.c_str());
+		iprintf("theme %i - %s\n", selected, themesname.c_str());
 		//Scan nds KEY
 		scanKeys();
 		int pressed = keysHeld();
