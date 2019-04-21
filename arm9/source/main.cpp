@@ -32,10 +32,9 @@
         
           
  std::string themename(int themenum){
- 	
-	std::string strnum = std::to_string(themenum);
-	std::string themepath = "/theme/" + strnum;
+	std::string themepath = "/theme/" + std::to_string(themenum);
 	printf("\x1b[7;1H%s", themepath);
+	printf("\x1b[6;1H/theme/" + std::to_string(themenum))
 	
 	if ((access((themepath + "/YSMenu.ini").c_str(), F_OK) == 0)) {
 		
