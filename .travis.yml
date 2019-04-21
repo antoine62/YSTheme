@@ -45,6 +45,7 @@ after_success:
   - echo 'yummy breakfast :3 (Build Successful)'
   - git config --local user.name "antoine62"
   - git clone --depth 1 https://$GITHUB_TOKEN@github.com/antoine62/builds.git
+  - ls
   - cd Builds/YSTheme
   - cp ../../YSTheme.nds YSTheme.nds
   - git stage .
