@@ -25,7 +25,6 @@
 #include <fat.h>
 #include <fstream>
 //---------------------------------------------------------------------------------   File management part
-std::string path = "/";
     
      
       /*_-_-_-_-_-_-_-_-_-_-_-_-*/
@@ -35,15 +34,15 @@ std::string path = "/";
  std::string themename(int themenum){
  	
 	std::string strnum = std::to_string(themenum);
-	std::string themepath = path +"theme/" + strnum;
-	if ((access((themepath+ "/YSMenu.ini").c_str(), F_OK) == 0) && (access((themepath+ "/YSmenu1.bmp").c_str(), F_OK) == 0) &&!(access((themepath+ "/YSmenu2.bmp").c_str(), F_OK) == 0)){
-		if ((access((themepath+ "/name.txt").c_str(), F_OK) == 0)){
-			 std::ifstream namefile(themepath + "/name.txt");
+	std::string themepath = "/theme/" + strnum;
+	if((access(themepath + "/YSMenu.ini", F_OK) == 0)) {
+		if ((access((themepath + "/name.txt").c_str(), F_OK) == 0)){
+			 /*std::ifstream namefile(themepath + "/name.txt");
 
 			std::string sLine;
 			std::getline(namefile, sLine);
 			std::string nameofthetheme = sLine;
-			namefile.close();
+			namefile.close();*/
 			return "Theme name";
   		
 			} else{
