@@ -74,17 +74,16 @@ int main(int argc, char **argv) {
 		int selected = 0;
 		std::string path = "./";
 		std::string themesname = themename(selected);
-		iprintf("theme %i - %s\n", selected, themesname.c_str());
+		iprintf("\x1b[1;1Htheme %i - %s \n", selected, themesname.c_str());
 	while (true){
 		//Scan nds KEY
 		scanKeys();
 		int pressed = keysDown();
 		if (pressed & KEY_RIGHT){
 			selected+=1;
-				iprintf("\x1b[1;1Htheme %i - %s\n", selected, themesname.c_str());
+
 			}
 		if(pressed & KEY_LEFT){
-			iprintf("\x1b[1;1Htheme %i - %s\n", selected, themesname.c_str());
 			selected -=1;
 			}
 		if(pressed & KEY_A){
@@ -98,6 +97,7 @@ int main(int argc, char **argv) {
 		if (selected > 20){
 			selected =0;
 			}
+		iprintf("\x1b[1;1Htheme %i - %s \n", selected, themesname.c_str());
 	}
 	return 0;
 	}
