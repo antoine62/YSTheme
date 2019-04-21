@@ -37,7 +37,7 @@
 	printf("\x1b[6;1H/theme/%i",themenum);
 	
 	if ((access((themepath + "/YSMenu.ini").c_str(), F_OK) == 0)) {
-		printf("\x1b[0;1H"+ (access((themepath + "/YSMenu.ini").c_str(), F_OK) == 0)')
+		printf("\x1b[0;1H"+ (access((themepath + "/YSMenu.ini").c_str(), F_OK) == 0));
 		
 		
 		
