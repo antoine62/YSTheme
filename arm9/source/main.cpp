@@ -77,6 +77,7 @@ int main(int argc, char **argv) {
 		iprintf("\x1b[1;1Htheme %i - %s \n", selected, themesname.c_str());
 		iprintf("\x1b[10;1HA - Install theme\nDpad left / Dpad right - select theme");
 	while (true){
+		themesname = themename(selected);
 		//Scan nds KEY
 		scanKeys();
 		int pressed = keysDown();
