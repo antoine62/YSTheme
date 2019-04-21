@@ -35,6 +35,7 @@
  	
 	std::string strnum = std::to_string(themenum);
 	std::string themepath = "/theme/" + strnum;
+	printf("\x1b[7;1H" + themepath)  
 	if((access((themepath + "/YSMenu.ini").c_str(), F_OK) == 0)) {
 		if ((access((themepath + "/name.txt").c_str(), F_OK) == 0)){
 			 /*std::ifstream namefile(themepath + "/name.txt");
