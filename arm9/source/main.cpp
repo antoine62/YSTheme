@@ -75,6 +75,7 @@ int main(int argc, char **argv) {
 		std::string path = "./";
 		std::string themesname = themename(selected);
 		iprintf("\x1b[1;1Htheme %i - %s \n", selected, themesname.c_str());
+		iprintf("\x1b[1;5HA - Install theme | Dpad left / Dpad right - select theme");
 	while (true){
 		//Scan nds KEY
 		scanKeys();
