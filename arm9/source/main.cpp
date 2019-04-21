@@ -81,14 +81,14 @@ int main(int argc, char **argv) {
 		int pressed = keysDown();
 		if (pressed & KEY_RIGHT){
 			selected+=1;
-				iprintf("theme %i - %s\n", selected, themesname.c_str());
+				iprintf("\x1b[1;1Htheme %i - %s\n", selected, themesname.c_str());
 			}
 		if(pressed & KEY_LEFT){
+			iprintf("\x1b[1;1Htheme %i - %s\n", selected, themesname.c_str());
 			selected -=1;
 			}
 		if(pressed & KEY_A){
 			if (themesname != "Theme not found"){
-					iprintf("theme %i - %s\n", selected, themesname.c_str());
 				stop();
 				}
 			}
