@@ -72,21 +72,23 @@ int main(int argc, char **argv) {
 	vramSetBankH(VRAM_H_SUB_BG);
 	consoleInit(NULL, 1, BgType_Text4bpp, BgSize_T_256x256, 15, 0, false, true);
 		int selected = 0;
-	while (true){
 		std::string path = "./";
 		std::string themesname = themename(selected);
 		iprintf("theme %i - %s\n", selected, themesname.c_str());
+	while (true){
 		//Scan nds KEY
 		scanKeys();
-		int pressed = keysHeld();
+		int pressed = keysDownRepeat();
 		if (pressed & KEY_RIGHT){
 			selected+=1;
+				iprintf("theme %i - %s\n", selected, themesname.c_str());
 			}
 		if(pressed & KEY_LEFT){
 			selected -=1;
 			}
 		if(pressed & KEY_A){
 			if (themesname != "Theme not found"){
+					iprintf("theme %i - %s\n", selected, themesname.c_str());
 				stop();
 				}
 			}
