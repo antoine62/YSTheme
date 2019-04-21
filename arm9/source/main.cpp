@@ -49,7 +49,9 @@
 			} else{
 				return "Theme found, please add a name.txt file.";
 				}
-		} else {return "Theme not found";}
+		} else {
+			return "Theme not found";
+			}
 	}
 //---------------------------------------------------------------------------------NDS related
 void stop (void) {
