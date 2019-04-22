@@ -90,7 +90,7 @@ int main(int argc, char **argv) {
 		int selected = 0;
 		std::string path = "./";
 		std::string themesname = themename(selected);
-		resetscreen()
+		resetscreen();
 	while (true){
 		themesname = themename(selected);
 		//Scan nds KEY
