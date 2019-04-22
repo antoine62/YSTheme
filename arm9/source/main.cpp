@@ -29,11 +29,10 @@
      
       /*_-_-_-_-_-_-_-_-_-_-_-_-*/
        
-        
+
           
  std::string themename(int themenum){
 	std::string themepath = "/theme/" + std::to_string(themenum);
-	printf("\x1b[0;1H"+ (access((themepath + "/YSMenu.ini").c_str(), F_OK) == 0));
 	
 	if ((access((themepath + "/YSMenu.ini").c_str(), F_OK) == 0)) {
 		
@@ -56,6 +55,17 @@
 			}
 	}
 //---------------------------------------------------------------------------------NDS related
+
+void resetscreen(){
+	int i =0;
+	while (i!=20){
+	printf("\x1b[%i;0HA                                  ",i);
+	i++;
+	}
+	iprintf("\x1b[10;1HA - Install theme\nDpad left / Dpad right - select theme");
+	 		iprintf("\x1b[1;1Htheme %i - %s \n", selected, themename(selected).c_str());
+	}
+
 void stop (void) {
 //---------------------------------------------------------------------------------
 	while (1) {
@@ -80,7 +90,7 @@ int main(int argc, char **argv) {
 		int selected = 0;
 		std::string path = "./";
 		std::string themesname = themename(selected);
-		iprintf("\x1b[10;1HA - Install theme\nDpad left / Dpad right - select theme");
+		resetscreen()
 	while (true){
 		themesname = themename(selected);
 		//Scan nds KEY
@@ -130,7 +140,6 @@ int main(int argc, char **argv) {
 		if (selected > 20){
 			selected =0;
 			}
-		iprintf("\x1b[1;1Htheme %i - %s \n", selected, themesname.c_str());
 	}
 	return 0;
 	}
