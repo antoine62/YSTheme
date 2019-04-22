@@ -42,13 +42,13 @@
 		
 		
 		if ((access((themepath + "/name.txt").c_str(), F_OK) == 0)){
-			 /*std::ifstream namefile(themepath + "/name.txt");
+			 std::ifstream namefile(themepath + "/name.txt");
 
 			std::string sLine;
 			std::getline(namefile, sLine);
 			std::string nameofthetheme = sLine;
-			namefile.close();*/
-			return "Theme name";
+			namefile.close();
+			return sline;
   		
 			} else{
 				return "Theme found, please add a name.txt file.";
@@ -82,7 +82,6 @@ int main(int argc, char **argv) {
 		int selected = 0;
 		std::string path = "./";
 		std::string themesname = themename(selected);
-		iprintf("\x1b[1;1Htheme %i - %s \n", selected, themesname.c_str());
 		iprintf("\x1b[10;1HA - Install theme\nDpad left / Dpad right - select theme");
 	while (true){
 		themesname = themename(selected);
