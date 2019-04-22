@@ -48,7 +48,7 @@
 			std::getline(namefile, sLine);
 			std::string nameofthetheme = sLine;
 			namefile.close();
-			return sline;
+			return sLine;
   		
 			} else{
 				return "Theme found, please add a name.txt file.";
