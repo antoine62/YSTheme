@@ -31,7 +31,7 @@
        
 
           
- std::string themename(int themenum){
+std::string themename(int themenum){
 	std::string themepath = "/theme/" + std::to_string(themenum);
 	
 	if ((access((themepath + "/YSMenu.ini").c_str(), F_OK) == 0)) {
@@ -59,8 +59,8 @@ int selected = 0;
 
 void resetscreen(){
 	int i =0;
-	while (i!=20){
-	printf("\x1b[%i;0HA                                  ",i);
+	while (i<20){
+	printf("\x1b[%i;0H                                  ",i);
 	i++;
 	}
 	iprintf("\x1b[10;1HA - Install theme\nDpad left / Dpad right - select theme");
@@ -98,10 +98,12 @@ int main(int argc, char **argv) {
 		int pressed = keysDown();
 		if (pressed & KEY_RIGHT){
 			selected+=1;
+			resetscreen();
 
 			}
 		if(pressed & KEY_LEFT){
 			selected -=1;
+			resetscreen();
 			}
 		if(pressed & KEY_A){
 			if (themesname != "Theme not found"){
@@ -136,9 +138,11 @@ int main(int argc, char **argv) {
 			}
 		if (selected <0){
 			selected =20;
+			resetscreen();
 			}
 		if (selected > 20){
 			selected =0;
+			resetscreen();
 			}
 	}
 	return 0;
