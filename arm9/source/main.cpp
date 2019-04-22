@@ -68,6 +68,13 @@ void stop (void) {
 //---------------------------------------------------------------------------------NDS Code
 int main(int argc, char **argv) {
 //---------------------------------------------------------------------------------
+
+
+
+		if (!fatInitDefault()) {
+				iprintf ("fatInitDefault failed!\n");
+				stop();
+			}
 	videoSetMode(MODE_0_2D);
 	videoSetModeSub(MODE_0_2D);
 	vramSetBankH(VRAM_H_SUB_BG);
