@@ -108,7 +108,7 @@ int main(int argc, char **argv) {
 				
 				
 				std::ifstream source1((themepath + "/YSmenu1.bmp").c_str(), std::ios::binary);
-				std::ofstream dest1("/TTmenu/YSmenu.bmp", std::ios::binary);
+				std::ofstream dest1("/TTmenu/YSmenu1.bmp", std::ios::binary);
     			dest1 << source1.rdbuf();
     			source1.close();
     			dest1.close();
