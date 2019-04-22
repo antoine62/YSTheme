@@ -33,8 +33,6 @@
           
  std::string themename(int themenum){
 	std::string themepath = "/theme/" + std::to_string(themenum);
-	printf("\x1b[7;1H%s", themepath.c_str());
-	printf("\x1b[6;1H/theme/%i",themenum);
 	printf("\x1b[0;1H"+ (access((themepath + "/YSMenu.ini").c_str(), F_OK) == 0));
 	
 	if ((access((themepath + "/YSMenu.ini").c_str(), F_OK) == 0)) {
@@ -97,6 +95,32 @@ int main(int argc, char **argv) {
 			}
 		if(pressed & KEY_A){
 			if (themesname != "Theme not found"){
+				
+				
+				
+				std::string themepath = "/theme/" + std::to_string(selected);
+				std::ifstream source((themepath + "/YSMenu.ini").c_str(), std::ios::binary);
+				std::ofstream dest("/TTmenu/YSMenu.ini", std::ios::binary);
+    			dest << source.rdbuf();
+    			source.close();
+    			dest.close();
+    			
+				
+				
+				std::ifstream source((themepath + "/YSmenu1.bmp").c_str(), std::ios::binary);
+				std::ofstream dest("/TTmenu/YSmenu.bmp", std::ios::binary);
+    			dest << source.rdbuf();
+    			source.close();
+    			dest.close();
+    			
+				
+				
+				std::ifstream source((themepath + "/YSmenu2.bmp").c_str(), std::ios::binary);
+				std::ofstream dest("/TTmenu/YSMenu2.bmp", std::ios::binary);
+    			dest << source.rdbuf();
+    			source.close();
+    			dest.close();
+				printf("Done! Please, restart your NDS.")
 				stop();
 				}
 			}
