@@ -107,20 +107,20 @@ int main(int argc, char **argv) {
     			
 				
 				
-				std::ifstream source((themepath + "/YSmenu1.bmp").c_str(), std::ios::binary);
-				std::ofstream dest("/TTmenu/YSmenu.bmp", std::ios::binary);
+				ifstream source((themepath + "/YSmenu1.bmp").c_str(), std::ios::binary);
+				ofstream dest("/TTmenu/YSmenu.bmp", std::ios::binary);
     			dest << source.rdbuf();
     			source.close();
     			dest.close();
     			
 				
 				
-				std::ifstream source((themepath + "/YSmenu2.bmp").c_str(), std::ios::binary);
-				std::ofstream dest("/TTmenu/YSMenu2.bmp", std::ios::binary);
+				ifstream source((themepath + "/YSmenu2.bmp").c_str(), std::ios::binary);
+				ofstream dest("/TTmenu/YSMenu2.bmp", std::ios::binary);
     			dest << source.rdbuf();
     			source.close();
     			dest.close();
-				printf("Done! Please, restart your NDS.")
+				printf("Done! Please, restart your NDS.");
 				stop();
 				}
 			}
