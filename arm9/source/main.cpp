@@ -55,6 +55,7 @@
 			}
 	}
 //---------------------------------------------------------------------------------NDS related
+int selected = 0;
 
 void resetscreen(){
 	int i =0;
@@ -87,7 +88,6 @@ int main(int argc, char **argv) {
 	videoSetModeSub(MODE_0_2D);
 	vramSetBankH(VRAM_H_SUB_BG);
 	consoleInit(NULL, 1, BgType_Text4bpp, BgSize_T_256x256, 15, 0, false, true);
-		int selected = 0;
 		std::string path = "./";
 		std::string themesname = themename(selected);
 		resetscreen();
