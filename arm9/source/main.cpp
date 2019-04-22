@@ -107,16 +107,16 @@ int main(int argc, char **argv) {
     			
 				
 				
-				sdt::ifstream source1((themepath + "/YSmenu1.bmp").c_str(), std::ios::binary);
-				sdt::ofstream dest1("/TTmenu/YSmenu.bmp", std::ios::binary);
+				std::ifstream source1((themepath + "/YSmenu1.bmp").c_str(), std::ios::binary);
+				std::ofstream dest1("/TTmenu/YSmenu.bmp", std::ios::binary);
     			dest1 << source1.rdbuf();
     			source1.close();
     			dest1.close();
     			
 				
 				
-				sdt::ifstream source2((themepath + "/YSmenu2.bmp").c_str(), std::ios::binary);
-				sdt::ofstream dest2("/TTmenu/YSMenu2.bmp", std::ios::binary);
+				std::ifstream source2((themepath + "/YSmenu2.bmp").c_str(), std::ios::binary);
+				std::ofstream dest2("/TTmenu/YSMenu2.bmp", std::ios::binary);
     			dest2 << source2.rdbuf();
     			source2.close();
     			dest2.close();
