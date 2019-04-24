@@ -65,7 +65,7 @@ void resetscreen(){
 	}
 	iprintf("\x1b[10;1HA - Install theme\nDpad left / Dpad right - select theme\nX - add 10 to theme number.\nB - Remove 10 to theme number.\nY - Make selected theme folder.");
 	 		iprintf("\x1b[1;1Htheme %i - %s \n", selected, themename(selected).c_str());
-	 		iprintf("\x1b[20;1HYSTheme ver 1.1 - antoine62 - github.com/antoine62/YSTheme");
+	 		iprintf("\x1b[20;1HYSTheme ver 1.1 - antoine62\ngithub.com/antoine62/YSTheme");
 	}
 
 void stop (void) {
