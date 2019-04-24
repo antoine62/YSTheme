@@ -121,7 +121,7 @@ int main(int argc, char **argv) {
 				//Do nothing
 			}else{
 				mkdir("/theme", 0777);
-				mkdir("/theme/" + std::to_string(selected), 0777);
+				mkdir(("/theme/" + std::to_string(selected)).c_str(), 0777);
 				}
 		}
 		if (pressed & KEY_A){
