@@ -110,7 +110,7 @@ int main(int argc, char **argv) {
 			selected+=10;
 			}
 		if (pressed & KEY_B){
-			if selected >9{
+			if (selected >9){
 			selected-=10;
 			} else{
 				selected=0;
@@ -124,7 +124,7 @@ int main(int argc, char **argv) {
 				mkdir("/theme/" + to_string(selected), 0777);
 				}
 		}
-		if(pressed & KEY_A){
+		if (pressed & KEY_A){
 			if (themesname != "Theme not found"){
 				
 				
