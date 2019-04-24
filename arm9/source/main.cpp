@@ -101,7 +101,7 @@ int main(int argc, char **argv) {
 			resetscreen();
 
 			}
-		if(pressed & KEY_LEFT){
+		if(pressed & KEY_LEFT && selected !=0){
 			selected -=1;
 			resetscreen();
 			}
@@ -135,14 +135,6 @@ int main(int argc, char **argv) {
 				printf("Done! Please, restart your NDS.");
 				stop();
 				}
-			}
-		if (selected <0){
-			selected =20;
-			resetscreen();
-			}
-		if (selected > 20){
-			selected =0;
-			resetscreen();
 			}
 	}
 	return 0;
