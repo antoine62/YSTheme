@@ -18,6 +18,6 @@ Replace  your YSTheme.nds file with the one from the release.zip file.
 <h4>Get some theme, copy them in /theme/(theme number)/<br/>Launch YSTheme<br/>Select your theme<br/>Press a to install it<br/> Done!</h4>
 <br/>
 <h5>Made by me.
-<br/>Tanks FlameKat57 for the bugfix/Some file of this repo (travis.yml).
+<br/>Tanks FlameKat53 for the bugfix/Some file of this repo (travis.yml).
 </h5>
 
