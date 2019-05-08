@@ -75,7 +75,7 @@ void resetscreen()
 		i++;
 	}
 	iprintf("\x1b[10;1HA - Install theme\n Dpad left / Dpad right - select theme\n X - add 10 to theme number.\n B - Remove 10 to theme number.\n Y - Make selected theme folder.");
-	iprintf("\x1b[1;1Htheme %s - %s \n", std::to_string(selected), themename(selected).c_str());
+	iprintf("\x1b[1;1Htheme %lu - %s \n", selected, themename(selected).c_str());
 	iprintf("\x1b[20;1HYSTheme ver 2.0 - antoine62\n github.com/antoine62/YSTheme");
 }
 
@@ -88,9 +88,7 @@ void stop(void)
 	
 	while (true)
 	{
-		if (false){
 			swiWaitForVBlank();
-		}
 	}
 }
 
@@ -179,7 +177,7 @@ int main(int argc, char **argv)
 				dest2 << source2.rdbuf();
 				source2.close();
 				dest2.close();
-				printf("\x1b[8;1HDone! Please, restart your NDS/Press A+B+X+Y+L+R if reset is on.");
+				printf("\x1b[8;1HDone! Please, restart your NDS.");
 				stop();
 			}
 		}
