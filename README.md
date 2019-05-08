@@ -6,7 +6,8 @@
 <hr/>
 <h3>Installation:</h3>
 <h4>
-Copy the YSTme.nds file from the <a href="https://github.com/antoine62/YSTheme/releases/">release.zip</a> archive somewhere on your fladhcard's SD.
+Copy the YSTheme.nds file from the <a href="https://github.com/antoine62/YSTheme/releases/">release.zip</a> archive somewhere on your flashcard's SD.<br/>
+(Optional) Copy the theme folder from the release.zip archive to the root of your flashcard's SD
 </h4>
 
 <h3>Update:</h3>
@@ -17,6 +18,6 @@ Replace  your YSTheme.nds file with the one from the release.zip file.
 <h4>Get some theme, copy them in /theme/(theme number)/<br/>Launch YSTheme<br/>Select your theme<br/>Press a to install it<br/> Done!</h4>
 <br/>
 <h5>Made by me.
-<br/>Tanks FlameKat57 for the bugfix/Some file of this repo (travis.yml).
+<br/>Tanks FlameKat53 for the bugfix/Some file of this repo (travis.yml).
 </h5>
 
