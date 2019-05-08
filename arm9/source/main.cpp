@@ -75,7 +75,7 @@ void resetscreen()
 		i++;
 	}
 	iprintf("\x1b[10;1HA - Install theme\n Dpad left / Dpad right - select theme\n X - add 10 to theme number.\n B - Remove 10 to theme number.\n Y - Make selected theme folder.");
-	iprintf("\x1b[1;1Htheme %s - %s \n", to_string(selected), themename(selected).c_str());
+	iprintf("\x1b[1;1Htheme %s - %s \n", std::to_string(selected), themename(selected).c_str());
 	iprintf("\x1b[20;1HYSTheme ver 2.0 - antoine62\n github.com/antoine62/YSTheme");
 }
 
