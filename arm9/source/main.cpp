@@ -82,7 +82,7 @@ void resetscreen()
 	printf("\x1b[20;1HYSTheme ver 2.0 - antoine62");
 	printf("\033[0m");
 	printf("\033[0;34m");
-	prinf("\x1b[21;1Hgithub.com/antoine62/YSTheme")
+	prinf("\x1b[21;1Hgithub.com/antoine62/YSTheme");
 	printf("\033[0m");
 }
 
