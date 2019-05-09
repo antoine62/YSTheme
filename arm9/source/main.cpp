@@ -75,8 +75,8 @@ void resetscreen()
 		i++;
 	}
 	iprintf("\x1b[10;1HA - Install theme\n Dpad left / Dpad right - select theme\n X - add 10 to theme number.\n B - Remove 10 to theme number.\n Y - Make selected theme folder.");
-	iprintf("\x1b[1;1Htheme %lu - %s \n", selected, themename(selected).c_str());
-	iprintf("\x1b[20;1HYSTheme ver 2.0 - antoine62\n github.com/antoine62/YSTheme");
+	iprintf("\x1b[1;1H\033[0;35mtheme %lu \033[0m-\033[0;36m %s \033[0m\n", selected, themename(selected).c_str());
+	iprintf("\x1b[20;1H\033[0;33mYSTheme ver 2.0 - antoine62\033[0m\n \033[0;34mgithub.com/antoine62/YSTheme\033[0m");
 }
 
 void stop(void)
@@ -177,7 +177,7 @@ int main(int argc, char **argv)
 				dest2 << source2.rdbuf();
 				source2.close();
 				dest2.close();
-				printf("\x1b[8;1HDone! Please, restart your NDS.");
+				printf("\x1b[8;1H\033[0;32mDone! Please, restart your NDS.\033[0m");
 				stop();
 			}
 		}
