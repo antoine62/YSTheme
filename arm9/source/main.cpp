@@ -74,9 +74,16 @@ void resetscreen()
 		printf("\x1b[%i;0H                                  ", i);
 		i++;
 	}
-	iprintf("\x1b[10;1HA - Install theme\n Dpad left / Dpad right - select theme\n X - add 10 to theme number.\n B - Remove 10 to theme number.\n Y - Make selected theme folder.");
-	iprintf("\x1b[1;1H\033[0;35mtheme %lu \033[0m-\033[0;36m %s \033[0m\n", selected, themename(selected).c_str());
-	iprintf("\x1b[20;1H\033[0;33mYSTheme ver 2.0 - antoine62\033[0m\n \033[0;34mgithub.com/antoine62/YSTheme\033[0m");
+	printf("\x1b[10;1HA - Install theme\n Dpad left / Dpad right - select theme\n X - add 10 to theme number.\n B - Remove 10 to theme number.\n Y - Make selected theme folder.");
+	printf("\033[0;32m")
+	printf("\x1b[1;1Htheme %lu - %s \n", selected, themename(selected).c_str());
+	printf("\033[0m")
+	printf("\033[0;33m")
+	printf("\x1b[20;1HYSTheme ver 2.0 - antoine62");
+	printf("\033[0m")
+	printf("\033[0;34m")
+	prinf("\x1b[21;1Hgithub.com/antoine62/YSTheme")
+	printf("\033[0m")
 }
 
 void stop(void)
@@ -104,7 +111,7 @@ int main(int argc, char **argv)
 
 	if (!fatInitDefault())
 	{
-		iprintf("fatInitDefault failed!\n");
+		printf("fatInitDefault failed!\n");
 		stop();
 	}
 	std::string themesname = themename(selected);
