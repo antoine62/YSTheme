@@ -74,11 +74,12 @@ void resetscreen()
 		printf("\x1b[%i;0H                                  ", i);
 		i++;
 	}
+	printf("\x1b[37m]");
 	printf("\x1b[10;1HA - Install theme\n Dpad left / Dpad right - select theme\n X - add 10 to theme number.\n B - Remove 10 to theme number.\n Y - Make selected theme folder.");
-	printf("\x1b[32m");
+	printf("\x1b[36m");
 	printf("\x1b[1;1Htheme %lu - %s \n", selected, themename(selected).c_str());
 	printf("\x1b[0m");
-	printf("\x1b[33m");
+	printf("\x1b[23m");
 	printf("\x1b[20;1HYSTheme ver 2.0 - antoine62");
 	printf("\x1b[0m");
 	printf("\x1b[34m");
@@ -184,7 +185,8 @@ int main(int argc, char **argv)
 				dest2 << source2.rdbuf();
 				source2.close();
 				dest2.close();
-				printf("\x1b[8;1H\x1b[0;32mDone! Please, restart your NDS.\x1b[0m");
+				printf("\x1b[22m");
+				printf("\x1b[8;1HDone! Please, restart your NDS.\x1b[0m");
 				stop();
 			}
 		}
