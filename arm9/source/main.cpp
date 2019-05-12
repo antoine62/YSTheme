@@ -74,9 +74,9 @@ void resetscreen()
 		printf("\x1b[%i;0H                                  ", i);
 		i++;
 	}
-	printf("\x1b[35;1m]");
+	printf("\x1b[0m]");
 	printf("\x1b[10;1HA - Install theme\n Dpad left / Dpad right - select theme\n X - add 10 to theme number.\n B - Remove 10 to theme number.\n Y - Make selected theme folder.");
-	printf("\x1b[36m");
+	printf("\x1b[35;1m");
 	printf("\x1b[1;1Htheme %lu - %s \n", selected, themename(selected).c_str());
 	printf("\x1b[0m");
 	printf("\x1b[33;1m");
